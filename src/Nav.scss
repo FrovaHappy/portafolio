@@ -1,0 +1,23 @@
+.nav{
+  &__a{
+    display: flex;
+    gap: .625rem;
+    white-space: nowrap;
+    width: max-content;
+    flex-wrap: wrap;
+    padding: .1875rem .3125rem;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    &:hover{
+      background-color: linear(#fff, transparent);
+    }
+  }
+  &__text{
+    font-size: 1rem;
+  }
+  &__icon{
+    aspect-ratio: 1/1;
+    height: 1.75rem;
+  }
+}

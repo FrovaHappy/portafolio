@@ -1,0 +1,54 @@
+* {
+  --paddingNav: calc(1.75rem + 0.3125rem * 2); // icon + padding
+}
+#root {
+  display: flex;
+  overflow: hidden;
+}
+.app {
+  
+  &__main {
+    width: -webkit-fill-available;
+    max-width: 175rem;
+    overflow: auto;
+  }
+  &__nav {
+    width: var(--paddingNav);
+    position: absolute;
+    flex-shrink: 0;
+    &--content {
+      position: fixed;
+      z-index: 500;
+      overflow: hidden;
+      height: -webkit-fill-available;
+      background-color: rgb(black, 0.6);
+      backdrop-filter: blur(6.25rem);
+      -webkit-backdrop-filter: blur(6.25rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: var(--paddingNav);
+
+      transition: width 0.2s ease 0.2s;
+      &:hover {
+        width: 18.75rem;
+      }
+    }
+  }
+}
+@mixin sectionBox($bg: transparent) {
+  min-height: 100vh;
+  padding-left: var(--paddingNav);
+  background-color: $bg;
+  overflow: hidden;
+}
+#home {
+  @include sectionBox($bg: black);
+  background-image: radial-gradient(circle at 107% 107%, #0091b154 0%, transparent 50%);
+}
+#projects {
+  @include sectionBox();
+}
+#about {
+  @include sectionBox();
+}
