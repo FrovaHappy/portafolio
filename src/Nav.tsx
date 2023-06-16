@@ -23,13 +23,14 @@ function Nav({
           {isSelected(Secctions.home, 'home')}
           <p className="nav__text">Home</p>
         </a>
-        <a href={`#${Secctions.about}`} className={'nav__a'} onClick={() => setSectionSelected(Secctions.about)}>
-          {isSelected(Secctions.about, 'profile')}
-          about
-        </a>
+
         <a href={`#${Secctions.projects}`} className={'nav__a'} onClick={() => setSectionSelected(Secctions.projects)}>
           {isSelected(Secctions.projects, 'proyect')}
           projects
+        </a>
+        <a href={`#${Secctions.about}`} className={'nav__a'} onClick={() => setSectionSelected(Secctions.about)}>
+          {isSelected(Secctions.about, 'profile')}
+          about
         </a>
         <div className="nav__space"></div>
         <Icons icon="menu" className={isActive} />

@@ -1,9 +1,10 @@
 import { arrayImports, IconsName } from './imports'
 
 function index({ icon, className }: { icon: IconsName; className?: string }) {
+  const extracted = arrayImports[icon]
   return (
-    <svg className={className} viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-      {arrayImports[icon]}
+    <svg className={className} viewBox={extracted.viewBox} xmlns="http://www.w3.org/2000/svg">
+      {extracted.jsx}
     </svg>
   )
 }

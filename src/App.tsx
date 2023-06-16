@@ -15,11 +15,11 @@ function App() {
   ]
   return (
     <>
-      <Nav sectionSelected={sectionSelected} setSectionSelected={ setSectionSelected }/>
+      <Nav sectionSelected={sectionSelected} setSectionSelected={setSectionSelected} />
       <div className="app__main">
         <Home cssId={Secctions.home} />
-        <div id="about"></div>
         <div id="projects">holas</div>
+        <div id="about"></div>
       </div>
     </>
   )
