@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 import './App.scss'
 import Nav from './Nav'
 import Home from './sections/home'
+import Proyect from './sections/proyect'
 export const enum Secctions {
   home = 'home',
   about = 'about',
@@ -18,6 +19,7 @@ function App() {
       <Nav sectionSelected={sectionSelected} setSectionSelected={setSectionSelected} />
       <div className="app__main">
         <Home cssId={Secctions.home} />
+        <Proyect cssId={Secctions.projects} />
         <div id="projects">holas</div>
         <div id="about"></div>
       </div>
