@@ -21,7 +21,7 @@
   }
   &__prof {
     font-weight: 700;
-    color: #0091b1;
+    color: var(--color);
   }
   &__navToDown {
     width: 15rem;
@@ -33,10 +33,10 @@
     position: absolute;
     top: .625rem;
     right: .625rem;
-    gap: .625rem;
+    gap: .75rem;
     &--icon{
-      color: #0091b1;
-      height: 1.25rem;
+      color: var(--color);
+      height: 2rem;
     }
   }
   &__separate{

@@ -1,5 +1,6 @@
 * {
-  --paddingNav: calc(1.75rem + 0.3125rem * 2); // icon + padding
+  --width-icon: calc(1.75rem + 0.3125rem * 2); // icon + icon padding x 2
+  --paddingNav-left: var(--width-icon);
 }
 #root {
   display: flex;
@@ -12,24 +13,34 @@
     overflow: auto;
   }
   &__nav {
-    width: var(--paddingNav);
+    width: var(--width-icon);
     position: absolute;
     flex-shrink: 0;
   }
 }
 @mixin sectionBox($bg: transparent) {
   min-height: 100vh;
-  padding-left: var(--paddingNav);
+  padding-left: var(--paddingNav-left);
   background-color: $bg;
   overflow: hidden;
 }
 #home {
-  @include sectionBox($bg: black);
-  background-image: radial-gradient(circle at 107% 107%, #0091b154 0%, transparent 50%);
+  @include sectionBox($bg: var(--bgHome));
+  background-image: radial-gradient(circle at 107% 107%, var(--color) -100%, transparent 50%);
 }
 #projects {
   @include sectionBox();
 }
 #about {
   @include sectionBox();
+}
+@media screen and (max-width:48rem){
+  *{
+    --paddingNav-left:0;
+  }
+  .app{
+    &__nav {
+      z-index: 100;
+    }
+  }
 }

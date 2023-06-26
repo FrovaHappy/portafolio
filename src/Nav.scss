@@ -3,12 +3,12 @@
   z-index: 500;
   overflow: hidden;
   height: -webkit-fill-available;
-  background-color: rgb(black, 0.6);
+  background-color: var(--bgHome) .9;
   backdrop-filter: blur(6.25rem);
   -webkit-backdrop-filter: blur(6.25rem);
   display: flex;
   flex-direction: column;
-  width: var(--paddingNav);
+  width: var(--width-icon);
   transition-property: width, height,bottom, left;
   transition-duration: .2s;
   transition-delay: .2s ;
@@ -46,7 +46,7 @@
 }
 @media screen and (max-width: 48rem) {
   .nav {
-    height: var(--paddingNav);
+    height: var(--width-icon);
     bottom: .3125rem;
     left: .3125rem;
     justify-content: flex-end;
@@ -54,8 +54,8 @@
       
       display: block;
       padding: .3125rem;
-      height: var(--paddingNav);
-      width: var(--paddingNav);
+      height: var(--width-icon);
+      width: var(--width-icon);
     }
     &:hover {
       width: inherit;
