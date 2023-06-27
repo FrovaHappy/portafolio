@@ -18,15 +18,16 @@
   &__a {
     display: flex;
     gap: 0.625rem;
-    white-space: nowrap;
-    width: max-content;
+    width: 18.75rem;
+    flex-shrink: 0;
+    overflow: hidden;
     flex-wrap: wrap;
     padding: 0.1875rem 0.3125rem;
     align-items: center;
-    color: white;
+    color: var(--textColor);
     text-decoration: none;
     &:hover {
-      background-color: linear(#fff, transparent);
+      background-color: var(--selection);
     }
   }
   &__text {
