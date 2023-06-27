@@ -1,0 +1,29 @@
+.proyect {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  &__title {
+    font-size: 1.5rem;
+  }
+  &__buttons {
+    display:  flex;
+    gap: .9375rem;
+  }
+  &__button {
+    background-color: var(--content);
+    font-size: 1.25rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: min-content;
+    height: min-content;
+    padding: .3125rem .9375rem;
+    cursor: default;
+    &--active{
+      box-shadow: 0 0 10px var(--textColor);
+    }
+    &:hover{
+      background-color: var(--selection);
+    }
+  }
+}

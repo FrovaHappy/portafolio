@@ -8,7 +8,7 @@ const links = (
 
 const secctions: Secctions = [
   {
-    title: 'lorem Ips incorrectly formatted',
+    title: 'discord title 1',
     body: (
       <p>
         rem ipsum dolor sit, amet consectetur adipisicing elit. Ab nobis dolor sunt voluptate repellat autem rem, iusto
@@ -21,7 +21,7 @@ const secctions: Secctions = [
     ),
   },
   {
-    title: 'lorem Ips incorrectly',
+    title: 'discord title 2',
     body: (
       <p>
         rem ipsum dolor sit, amet consectetur adipisicing elit. Ab nobis dolor sunt voluptate repellat autem rem, iusto
@@ -34,12 +34,12 @@ const secctions: Secctions = [
     ),
   },
 ]
-function animeHoshi() {
+function DiscordBot() {
   return {
-    title: 'AnimeHoshi',
+    title: 'Discord Bot',
     iconlink: '',
     article: <Docs sections={secctions} links={links} />,
   }
 }
 
-export default animeHoshi
+export default DiscordBot

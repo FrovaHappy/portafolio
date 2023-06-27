@@ -20,7 +20,6 @@ function App() {
       <div className="app__main">
         <Home cssId={Secctions.home} />
         <Proyect cssId={Secctions.projects} />
-        <div id="projects">holas</div>
         <div id="about"></div>
       </div>
     </>
