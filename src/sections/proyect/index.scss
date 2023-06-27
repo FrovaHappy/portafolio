@@ -1,5 +1,7 @@
 .proyect {
   display: flex;
+  height: 100vh;
+  scroll-snap-align: start;
   flex-direction: column;
   gap: 1.25rem;
   padding: 1.25rem;

@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './index.scss'
 export type Secctions = { title: string; body: JSX.Element }[]
 
@@ -6,33 +7,42 @@ interface Props {
   links: JSX.Element
 }
 
-function index({ sections, links }: Props) {
+function Index({ sections, links }: Props) {
   const parse = (title: string) => title.toLowerCase().replace(/[\s]/g, '_')
+  const [index, setIndex] = useState(0)
+  const activeIndex = (i: number) => (i === index ? '--linkActive' : '')
   return (
     <div className="docs">
-      <div className="docs__contents">
+      <div className="docs__nav">
         {sections.map((section, i) => {
           return (
-            <a className="docs__contents--link" href={`#${parse(section.title)}`} key={i}>
+            <a
+              className={`docs__nav--link docs__nav${activeIndex}`}
+              href={`#${parse(section.title)}`}
+              key={i}
+              onClick={() => setIndex(i)}
+            >
               {section.title}
             </a>
           )
         })}
+      </div>
+      <div className="docs__content">
         {sections.map((section, i) => {
           return (
-            <div className="sectionsDocs" key={i}>
-              <h4 id={parse(section.title)} className="sectionsDocs__title">
+            <div className="parcialDocs" key={i}>
+              <h4 id={parse(section.title)} className="parcialDocs__title">
                 {section.title + '.'}
               </h4>
-              <div className="sectionsDocs__body">{section.body}</div>
+              <div className="parcialDocs__body">{section.body}</div>
             </div>
           )
         })}
-
-        <div className="docs__links">{links}</div>
       </div>
+
+      <div className="docs__links">{links}</div>
     </div>
   )
 }
 
-export default index
+export default Index

@@ -1,12 +1,52 @@
-.docs{
-  &__contents{
-    &--link{
-
+.docs {
+  display: flex;
+  position: relative;
+  padding: 0.625rem;
+  background-color: var(--content);
+  flex-grow: 1;
+  overflow: auto;
+  gap: 0.625rem;
+  &__nav {
+    width: 12.5rem;
+    position: sticky;
+    flex-shrink: 0;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    &--link {
+      padding: 0.3125rem 0.9375rem;
+      flex-basis: 0;
+      width: -webkit-fill-available;
+      font-size: 0.875rem;
+      text-decoration: none;
+      color: var(--textColor);
+      &:hover {
+        background-color: var(--selection);
+      }
+    }
+    &--linkActive{
+      background-color: var(--selection);
     }
   }
-  &__links{}
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
+  }
+  &__links {
+    position: absolute;
+    top: 0.625rem;
+    right: 0.625rem;
+  }
 }
-.sectionsDocs{
-  &__title{}
-  &__body{}
+.parcialDocs {
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  &__body {
+    font-size: 1rem;
+  }
 }
