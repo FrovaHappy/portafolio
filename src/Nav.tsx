@@ -16,7 +16,7 @@ function Nav({
   )
   const isActive = active ? 'nav__menu' : 'nav__menu nav__menu--active'
   return (
-    <div className="app__nav">
+    <div className="root__nav">
       <nav className="nav" onClick={() => setActive(!active)}>
         <div className="nav__space"></div>
         <a href={`#${Secctions.home}`} className={'nav__a'} onClick={() => setSectionSelected(Secctions.home)}>

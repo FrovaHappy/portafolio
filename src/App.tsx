@@ -15,14 +15,12 @@ function App() {
     (v: Secctions) => void
   ]
   return (
-    <>
+    <div className="root">
       <Nav sectionSelected={sectionSelected} setSectionSelected={setSectionSelected} />
-      <div className="app__main">
-        <Home cssId={Secctions.home} />
-        <Proyect cssId={Secctions.projects} />
-        <div id="about"></div>
-      </div>
-    </>
+      <Home cssId={Secctions.home} />
+      <Proyect cssId={Secctions.projects} />
+      <div id="about"></div>
+    </div>
   )
 }
 

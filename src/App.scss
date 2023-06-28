@@ -2,19 +2,14 @@
   --width-icon: calc(1.75rem + 0.3125rem * 2); // icon + icon padding x 2
   --paddingNav-left: var(--width-icon);
 }
-#root {
+.root {
   display: flex;
-  overflow: hidden;
-}
-.app {
-  &__main {
-    width: -webkit-fill-available;
-    max-width: 175rem;
-    overflow: auto;
-  }
-  &__nav {
+  height: 100vh;
+  flex-direction: column;
+  overflow: auto;
+  max-width: 175rem;
+  &__nav{
     width: var(--width-icon);
-    position: absolute;
     flex-shrink: 0;
   }
 }
@@ -22,7 +17,7 @@
   min-height: 100vh;
   padding-left: var(--paddingNav-left);
   background-color: $bg;
-  overflow: hidden;
+  scroll-margin-top: 1rem;
 }
 #home {
   @include sectionBox($bg: var(--bgHome));
@@ -38,9 +33,7 @@
   *{
     --paddingNav-left:0;
   }
-  .app{
-    &__nav {
+  .root__nav{
       z-index: 100;
     }
-  }
 }
