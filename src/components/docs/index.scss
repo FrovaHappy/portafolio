@@ -1,10 +1,12 @@
+:root{
+  --heigth-proyect-buttons: -5rem;
+}
 .docs {
   display: flex;
   position: relative;
   padding: 0.625rem;
+  padding-left: 0;
   background-color: var(--content);
-  flex-grow: 1;
-  overflow: auto;
   gap: 0.625rem;
   &__nav {
     width: 12.5rem;
@@ -14,7 +16,6 @@
     left: 0;
     display: flex;
     flex-direction: column;
-    overflow: auto;
     &--link {
       padding: 0.3125rem 0.9375rem;
       flex-basis: 0;
@@ -42,6 +43,10 @@
   }
 }
 .parcialDocs {
+  &__ancor {
+    position: relative;
+    top: var(--heigth-proyect-buttons);
+  }
   &__title {
     font-size: 1.5rem;
     font-weight: 700;

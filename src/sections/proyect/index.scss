@@ -1,9 +1,8 @@
 .proyect {
   display: flex;
-  height: 100vh;
+  height: m;
   scroll-snap-align: start;
   flex-direction: column;
-  gap: 1.25rem;
   padding: 1.25rem;
   &__title {
     font-size: 1.5rem;
@@ -11,6 +10,11 @@
   &__buttons {
     display:  flex;
     gap: .9375rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--bgColor);
+    padding: 1.25rem 0;
   }
   &__button {
     background-color: var(--content);

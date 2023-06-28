@@ -31,9 +31,8 @@ function Index({ sections, links }: Props) {
         {sections.map((section, i) => {
           return (
             <div className="parcialDocs" key={i}>
-              <h4 id={parse(section.title)} className="parcialDocs__title">
-                {section.title + '.'}
-              </h4>
+              <span id={parse(section.title)} className="parcialDocs__ancor"></span>
+              <h4 className="parcialDocs__title">{section.title + '.'}</h4>
               <div className="parcialDocs__body">{section.body}</div>
             </div>
           )

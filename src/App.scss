@@ -14,7 +14,7 @@
   }
 }
 @mixin sectionBox($bg: transparent) {
-  min-height: 100vh;
+
   padding-left: var(--paddingNav-left);
   background-color: $bg;
   scroll-margin-top: 1rem;
@@ -22,12 +22,14 @@
 #home {
   @include sectionBox($bg: var(--bgHome));
   background-image: radial-gradient(circle at 107% 107%, var(--color) -100%, transparent 50%);
+  min-height: 100vh;
 }
 #projects {
   @include sectionBox();
 }
 #about {
   @include sectionBox();
+  min-height: 100vh;
 }
 @media screen and (max-width:48rem){
   *{
