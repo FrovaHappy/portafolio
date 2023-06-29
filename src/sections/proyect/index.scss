@@ -1,7 +1,5 @@
 .proyect {
   display: flex;
-  height: m;
-  scroll-snap-align: start;
   flex-direction: column;
   padding: 1.25rem;
   &__title {
@@ -18,6 +16,8 @@
   }
   &__button {
     background-color: var(--content);
+    text-decoration: none;
+    color: var(--textColor);
     font-size: 1.25rem;
     font-weight: 700;
     white-space: nowrap;

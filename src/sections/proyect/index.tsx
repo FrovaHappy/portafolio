@@ -15,13 +15,14 @@ function Index({ cssId }: { cssId: string }) {
         <div className="proyect__buttons">
           {articles.map((article, i) => {
             return (
-              <div
+              <a
+                href={`#${cssId}`}
                 className={`proyect__button proyect__button${buttonActive(i)}`}
                 key={article.title}
                 onClick={() => setIndex(i)}
               >
                 {article.title}
-              </div>
+              </a>
             )
           })}
         </div>

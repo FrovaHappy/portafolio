@@ -14,10 +14,8 @@
   }
 }
 @mixin sectionBox($bg: transparent) {
-
   padding-left: var(--paddingNav-left);
   background-color: $bg;
-  scroll-margin-top: 1rem;
 }
 #home {
   @include sectionBox($bg: var(--bgHome));

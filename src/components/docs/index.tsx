@@ -17,7 +17,7 @@ function Index({ sections, links }: Props) {
         {sections.map((section, i) => {
           return (
             <a
-              className={`docs__nav--link docs__nav${activeIndex}`}
+              className={`docs__nav--link docs__nav${activeIndex(i)}`}
               href={`#${parse(section.title)}`}
               key={i}
               onClick={() => setIndex(i)}
