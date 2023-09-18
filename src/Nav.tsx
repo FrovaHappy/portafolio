@@ -1,39 +1,58 @@
 import { useState } from 'react'
-import { Secctions } from './App'
+
 import './Nav.scss'
-import Icons from './components/icons'
-import { IconsName } from './components/icons/imports'
+import Icons, { type IconNames } from './components/icons'
+import { Sections } from './enum'
 function Nav({
   sectionSelected,
-  setSectionSelected,
+  setSectionSelected
 }: {
-  sectionSelected: Secctions
-  setSectionSelected: (v: Secctions) => void
+  sectionSelected: Sections
+  setSectionSelected: (v: Sections) => void
 }) {
   const [active, setActive] = useState(false)
-  const isSelected = (section: Secctions, icon: IconsName) => (
-    <Icons icon={section === sectionSelected ? icon : 'navDefault'} className="nav__icon" />
+  const isSelected = (section: Sections, icon: IconNames) => (
+    <Icons iconName={section === sectionSelected ? icon : 'navDefault'} className='nav__icon' />
   )
   const isActive = active ? 'nav__menu' : 'nav__menu nav__menu--active'
   return (
-    <div className="root__nav">
-      <nav className="nav" onClick={() => setActive(!active)}>
-        <div className="nav__space"></div>
-        <a href={`#${Secctions.home}`} className={'nav__a'} onClick={() => setSectionSelected(Secctions.home)}>
-          {isSelected(Secctions.home, 'home')}
-          <p className="nav__text">Home</p>
+    <div className='root__nav'>
+      <nav
+        className='nav'
+        onClick={() => {
+          setActive(!active)
+        }}>
+        <div className='nav__space'></div>
+        <a
+          href={`#${Sections.home}`}
+          className={'nav__a'}
+          onClick={() => {
+            setSectionSelected(Sections.home)
+          }}>
+          {isSelected(Sections.home, 'home')}
+          <p className='nav__text'>Home</p>
         </a>
 
-        <a href={`#${Secctions.projects}`} className={'nav__a'} onClick={() => setSectionSelected(Secctions.projects)}>
-          {isSelected(Secctions.projects, 'proyect')}
+        <a
+          href={`#${Sections.projects}`}
+          className={'nav__a'}
+          onClick={() => {
+            setSectionSelected(Sections.projects)
+          }}>
+          {isSelected(Sections.projects, 'project')}
           projects
         </a>
-        <a href={`#${Secctions.about}`} className={'nav__a'} onClick={() => setSectionSelected(Secctions.about)}>
-          {isSelected(Secctions.about, 'profile')}
+        <a
+          href={`#${Sections.about}`}
+          className={'nav__a'}
+          onClick={() => {
+            setSectionSelected(Sections.about)
+          }}>
+          {isSelected(Sections.about, 'profile')}
           about
         </a>
-        <div className="nav__space"></div>
-        <Icons icon="menu" className={isActive} />
+        <div className='nav__space'></div>
+        <Icons iconName='menu' className={isActive} />
       </nav>
     </div>
   )

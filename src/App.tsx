@@ -2,24 +2,21 @@ import { useRef, useState } from 'react'
 import './App.scss'
 import Nav from './Nav'
 import Home from './sections/home'
-import Proyect from './sections/proyect'
-export const enum Secctions {
-  home = 'home',
-  about = 'about',
-  projects = 'projects',
-}
+import Projects from './sections/proyect'
+import { Sections } from './enum'
+
 function App() {
   const hashtag = useRef(window.location.hash.replace('#', ''))
-  const [sectionSelected, setSectionSelected] = useState(hashtag.current === '' ? Secctions.home : hashtag.current) as [
-    Secctions,
-    (v: Secctions) => void
+  const [sectionSelected, setSectionSelected] = useState(hashtag.current === '' ? Sections.home : hashtag.current) as [
+    Sections,
+    (v: Sections) => void
   ]
   return (
-    <div className="root">
+    <div className='root'>
       <Nav sectionSelected={sectionSelected} setSectionSelected={setSectionSelected} />
-      <Home cssId={Secctions.home} />
-      <Proyect cssId={Secctions.projects} />
-      <div id="about"></div>
+      <Home cssId={Sections.home} />
+      <Projects cssId={Sections.projects} />
+      <div id='about'></div>
     </div>
   )
 }
