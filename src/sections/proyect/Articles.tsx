@@ -2,12 +2,20 @@ import Markdown from 'markdown-to-jsx'
 import type { Article } from '.'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import './Articles.scss'
 interface Props {
   article: Article
 }
-function DivContent({ children }: React.PropsWithChildren) {
-  return <div>{children}</div>
+function Code({ children }: { children: string }) {
+  return (
+    <div className='code'>
+      <SyntaxHighlighter language='typescript' style={a11yDark}>
+        {children}
+      </SyntaxHighlighter>
+    </div>
+  )
 }
 function Articles({ article }: Props) {
   const [markdown, setMarkdown] = useState('')
@@ -26,11 +34,10 @@ function Articles({ article }: Props) {
   }, [article.article])
   return (
     <Markdown
+      className='markdown'
       options={{
         overrides: {
-          h1: {
-            component: DivContent
-          }
+          code: Code
         }
       }}>
       {markdown}
