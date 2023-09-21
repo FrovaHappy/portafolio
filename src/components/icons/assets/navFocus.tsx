@@ -19,7 +19,7 @@ const navtoDown = (
     <path
       d='m 112.929,45.5754 -1.414,1.4142 8.485,8.4853 8.485,-8.4853 -1.414,-1.4142 -7.071,7.071 z'
       fill='var(--color)'
-      id='navTodown'
+      id='navToDown'
     />
     <path fill='var(--color)' d='m 92.691406,49.525391 v 2 h 4 v -2 z m 8.000004,0 v 2 h 3.84765 v -2 z' id='path6-9' />
   </>
