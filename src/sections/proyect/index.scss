@@ -1,35 +1,47 @@
 .project {
   display: flex;
   flex-direction: column;
-  padding: 1.25rem;
+  padding: 2%;
+  gap: .4375rem;
   &__title {
     font-size: 1.5rem;
   }
   &__buttons {
-    display:  flex;
-    gap: .9375rem;
+    display: flex;
+    gap: 0.9375rem;
     position: sticky;
     top: 0;
     z-index: 10;
-    background-color: var(--bgColor);
-    padding: 1.25rem 0;
+    background-color: var(--content-60pc);
+    overflow-x: auto;
+    backdrop-filter: blur(50px);
+    padding: 0.625rem 1.25rem;
+    border-bottom: 2px solid var(--content-sup-opacity);
   }
   &__button {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+
     background-color: var(--content);
     text-decoration: none;
-    color: var(--textColor);
+    color: var(--text-color);
     font-size: 1.25rem;
     font-weight: 700;
     white-space: nowrap;
     width: min-content;
-    height: min-content;
-    padding: .3125rem .9375rem;
+    height: 3.125rem;
+    padding: 0.625rem 0.9375rem;
     cursor: default;
-    &--active{
-      box-shadow: 0 0 10px var(--textColor);
+    &--active {
+      border: 2px solid var(--color);
     }
-    &:hover{
-      background-color: var(--selection);
+    &:hover {
+      background-color: var(--content-sup-opacity);
     }
+  }
+  &__img {
+    height: 100%;
+    aspect-ratio: 1/1;
   }
 }

@@ -1,18 +1,20 @@
-:root{
-  --bgColor : #333333;
-  --textColor: #fff;
+:root {
+  --bgColor: #333333;
+  --text-color: #fff;
   --color: #00b0d7;
   --content: #454545;
-  --selection: #515151;
+  --content-sup-opacity: #525252;
+  --content-60pc: #45454599; // transparency percentage
   --bgHome: #030303;
 }
 @media (prefers-color-scheme: light) {
   :root {
-    --bgColor : #ffffff;
-    --textColor: #213547;
+    --bgColor: #ffffff;
+    --text-color: #213547;
     --color: #006c85;
-    --content: #d4d4d4;
-    --selection: #9e9e9e;
+    --content: #e6e6e6;
+    --content-sup-opacity: #bfbfbf;
+    --content-60pc: #e6e6e699;
     --bgHome: #ececec;
   }
 }
