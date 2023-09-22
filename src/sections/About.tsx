@@ -1,5 +1,6 @@
 import Icons from '../components/icons'
-
+import config from '../config'
+import './About.scss'
 const skills = [
   'TypesScript',
   'JavasScript',
@@ -47,11 +48,11 @@ function About({ cssId }: { cssId: string }) {
             te recomiendo que me contactes por Linkedin pero puedes usar las siguientes redes.
           </p>
           <div className='about__socials'>
-            <a href='https://www.linkedin.com/in/frovahappy' className='about__social about__social--linkedin'>
+            <a href={config.urlLinkedIn} className='about__social about__social--linkedin'>
               <Icons iconName='linkedin' className='about__social--icon' />
               LinkedIn
             </a>
-            <a href='https://discordapp.com/users/653429940502659111' className='about__social about__social--discord'>
+            <a href={config.urlDiscord} className='about__social about__social--discord'>
               <Icons iconName='discord' className='about__social--icon' />
               Discord
             </a>
