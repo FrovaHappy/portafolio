@@ -1,30 +1,7 @@
 import { useState } from 'react'
 import './index.scss'
-import Articles from './Articles'
-import type { IconNames } from '../../components/icons'
-export interface Article {
-  title: string
-  article: string
-  iconLink?: string
-  socials?: Array<[icons: IconNames, title: string, link: string]>
-}
-const articles: Article[] = [
-  {
-    title: 'anime Hoshi',
-    article: 'https://raw.githubusercontent.com/FrovaHappy/monorepo-scrapping-anime/main/README.md',
-    iconLink:
-      'https://raw.githubusercontent.com/FrovaHappy/monorepo-scrapping-anime/main/packages/frontend/public/windows11/SmallTile.scale-400.png',
-    socials: [
-      ['discord', 'link a discord', 'https://google.com/'],
-      ['github', 'link al repositorio', 'github']
-    ]
-  },
-  {
-    title: 'discord bot',
-    article: 'https://raw.githubusercontent.com/FrovaHappy/bot-discord/main/README.md'
-  }
-]
-
+import BuildArticle from './BuildArticle'
+import { articles } from './articles'
 function Index({ cssId }: { cssId: string }) {
   const [index, setIndex] = useState(0)
   const buttonActive = (i: number) => (index === i ? '--active' : '')
@@ -50,7 +27,7 @@ function Index({ cssId }: { cssId: string }) {
             )
           })}
         </div>
-        <Articles article={articles[index]} />
+        <BuildArticle article={articles[index]} />
       </div>
     </div>
   )

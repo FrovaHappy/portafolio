@@ -1,13 +1,16 @@
 .markdown {
   padding: 0.9375rem;
   background-color: var(--content);
-  & > h1 {
-    font-size: 1.5625rem;
-    padding-top: 0.3125rem;
-    padding-bottom: 0.3125rem;
-    margin-bottom: 0.3125rem;
+  &__title {
     border-bottom: 2px solid var(--content-sup-opacity);
-
+    display: flex;
+    align-items: center;
+    margin-bottom: .3125rem;
+  }
+  & > div > h1 {
+    font-size: 1.5625rem;
+    white-space: nowrap;
+    padding-bottom: .625rem;
   }
   & > h2 {
     font-size: 1.25rem;
@@ -34,7 +37,6 @@
   width: -webkit-fill-available;
   flex-direction: row-reverse;
   flex-wrap: wrap;
-  padding: 0.4375rem 0.9375rem;
 }
 .social {
   height: 2.375rem;

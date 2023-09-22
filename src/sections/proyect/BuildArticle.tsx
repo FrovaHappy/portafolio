@@ -1,5 +1,5 @@
 import Markdown from 'markdown-to-jsx'
-import type { Article } from '.'
+import type { Article } from './articles'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
@@ -45,14 +45,22 @@ function Articles({ article }: Props) {
       })}
     </div>
   )
+  const TitleComponent = ({ children }: React.PropsWithChildren) => {
+    return (
+      <div className='markdown__title'>
+        <h1>{children}</h1>
+        {SocialsComponent}
+      </div>
+    )
+  }
   return (
     <>
-      {article.socials !== undefined ? SocialsComponent : null}
       <Markdown
         className='markdown'
         options={{
           overrides: {
-            code: Code
+            code: Code,
+            h1: TitleComponent
           }
         }}>
         {markdown}
