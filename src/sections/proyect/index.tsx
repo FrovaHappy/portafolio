@@ -30,8 +30,8 @@ function Index({ cssId }: { cssId: string }) {
   const buttonActive = (i: number) => (index === i ? '--active' : '')
   return (
     <div id={cssId}>
-      <div className='project'>
-        <h2 className='protect__title'> Proyectos</h2>
+      <div className='mainSection'>
+        <h2 className='mainSection__title'> Proyectos</h2>
         <div className='project__buttons'>
           {articles.map((article, i) => {
             const Img = <img src={article.iconLink} alt={`${article.title} icons`} className='project__img' />

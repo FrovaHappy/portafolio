@@ -4,6 +4,7 @@ import Nav from './Nav'
 import Home from './sections/home'
 import Projects from './sections/proyect'
 import { Sections } from './enum'
+import About from './sections/About'
 
 function App() {
   const hashtag = useRef(window.location.hash.replace('#', ''))
@@ -16,7 +17,7 @@ function App() {
       <Nav sectionSelected={sectionSelected} setSectionSelected={setSectionSelected} />
       <Home cssId={Sections.home} />
       <Projects cssId={Sections.projects} />
-      <div id='about'></div>
+      <About cssId='about' />
     </div>
   )
 }
