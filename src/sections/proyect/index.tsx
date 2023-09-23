@@ -27,7 +27,9 @@ function Index({ cssId }: { cssId: string }) {
             )
           })}
         </div>
-        <BuildArticle article={articles[index]} />
+        {articles[index].articles.map((article, index) => {
+          return <BuildArticle key={index} article={article} />
+        })}
       </div>
     </div>
   )

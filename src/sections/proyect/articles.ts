@@ -1,24 +1,31 @@
 import type { IconNames } from '../../components/icons'
 
-export interface Article {
+export interface Articles {
   title: string
-  article: string
+  articles: Article[]
   iconLink?: string
+}
+export interface Article {
+  article: string
   socials?: Array<[icons: IconNames, title: string, link: string]>
 }
-export const articles: Article[] = [
+export const articles: Articles[] = [
   {
     title: 'Anime Hoshi',
-    article: 'https://raw.githubusercontent.com/FrovaHappy/monorepo-scrapping-anime/main/README.md',
+    articles: [
+      {
+        article: 'https://raw.githubusercontent.com/FrovaHappy/monorepo-scrapping-anime/main/README.md',
+        socials: [
+          ['discord', 'link a discord', 'https://discord.gg/DSSfHnwMw9/DSSfHnwMw9'],
+          ['github', 'link al repositorio', 'https://github.com/FrovaHappy/monorepo-scrapping-anime']
+        ]
+      }
+    ],
     iconLink:
-      'https://raw.githubusercontent.com/FrovaHappy/monorepo-scrapping-anime/main/packages/frontend/public/windows11/SmallTile.scale-400.png',
-    socials: [
-      ['discord', 'link a discord', 'https://discord.gg/DSSfHnwMw9/DSSfHnwMw9'],
-      ['github', 'link al repositorio', 'https://github.com/FrovaHappy/monorepo-scrapping-anime']
-    ]
+      'https://raw.githubusercontent.com/FrovaHappy/monorepo-scrapping-anime/main/packages/frontend/public/windows11/SmallTile.scale-400.png'
   },
   {
     title: 'discord bot',
-    article: 'https://raw.githubusercontent.com/FrovaHappy/bot-discord/main/README.md'
+    articles: [{ article: 'https://raw.githubusercontent.com/FrovaHappy/bot-discord/main/README.md' }]
   }
 ]
