@@ -34,6 +34,9 @@
     padding: 0.3125rem 0.875rem;
     text-decoration: none;
     align-content: center;
+    &:hover{
+      filter: opacity(0.9);
+    }
     &--icon {
       height: 2rem;
       aspect-ratio: 1/1;

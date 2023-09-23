@@ -25,7 +25,7 @@ export const articles: Articles[] = [
       'https://raw.githubusercontent.com/FrovaHappy/monorepo-scrapping-anime/main/packages/frontend/public/windows11/SmallTile.scale-400.png'
   },
   {
-    title: 'discord bot',
-    articles: [{ article: 'https://raw.githubusercontent.com/FrovaHappy/bot-discord/main/README.md' }]
+    title: 'Este Portafolio',
+    articles: [{ article: 'https://raw.githubusercontent.com/FrovaHappy/portafolio/main/readme.md' }]
   }
 ]

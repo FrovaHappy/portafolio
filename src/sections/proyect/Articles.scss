@@ -24,11 +24,19 @@
   }
   & > p {
     font-size: 1rem;
+    padding-bottom: .3125rem;
+    width: -webkit-fill-available;
+  }
+  & > p > img {
+    padding: .3125rem 0;
+    height: 31.25rem;
+    max-width: -webkit-fill-available;
   }
   & > ul {
     list-style-position: inside;
     margin-left: 0.625rem;
   }
+
 }
 .socials {
   display: flex;
