@@ -1,11 +1,18 @@
+import { useRef } from 'react'
 import Icons from '../components/icons'
 import config from '../config'
 import { Sections } from '../enum'
+import type { SectionProps } from '../types'
+import useObserverSections from '../useObserverSections'
 import './home.scss'
 
-function home({ cssId }: { cssId: string }) {
+function Home({ id, setSectionSelected }: SectionProps) {
+  const ref = useRef<HTMLDivElement>(null)
+  useObserverSections(ref, () => {
+    setSectionSelected(Sections.home)
+  })
   return (
-    <div id={cssId}>
+    <div id={id} ref={ref}>
       <div className='home'>
         <span className='home__separate'></span>
         <h1 className='home__text'>
@@ -35,4 +42,4 @@ function home({ cssId }: { cssId: string }) {
   )
 }
 
-export default home
+export default Home

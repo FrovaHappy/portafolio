@@ -1,5 +1,9 @@
+import { useRef } from 'react'
 import Icons from '../components/icons'
 import config from '../config'
+import { Sections } from '../enum'
+import type { SectionProps } from '../types'
+import useObserverSections from '../useObserverSections'
 import './About.scss'
 const skills = [
   'TypesScript',
@@ -12,9 +16,13 @@ const skills = [
   'Responsive Design',
   'Adaptive Design'
 ]
-function About({ cssId }: { cssId: string }) {
+function About({ id, setSectionSelected }: SectionProps) {
+  const ref = useRef<HTMLDivElement>(null)
+  useObserverSections(ref, () => {
+    setSectionSelected(Sections.about)
+  })
   return (
-    <div id={cssId}>
+    <div id={id} ref={ref}>
       <div className='mainSection about'>
         <section className='about__full'>
           <h2 className='mainSection__title'>Sobre Mí</h2>

@@ -15,9 +15,9 @@ function App() {
   return (
     <div className='root'>
       <Nav sectionSelected={sectionSelected} setSectionSelected={setSectionSelected} />
-      <Home cssId={Sections.home} />
-      <Projects cssId={Sections.projects} />
-      <About cssId='about' />
+      <Home id={Sections.home} setSectionSelected={setSectionSelected} />
+      <Projects id={Sections.projects} setSectionSelected={setSectionSelected} />
+      <About id={Sections.about} setSectionSelected={setSectionSelected} />
     </div>
   )
 }

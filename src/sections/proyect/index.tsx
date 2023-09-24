@@ -1,12 +1,20 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import './index.scss'
 import BuildArticle from './BuildArticle'
 import { articles } from './articles'
-function Index({ cssId }: { cssId: string }) {
+import type { SectionProps } from '../../types'
+import useObserverSections from '../../useObserverSections'
+import { Sections } from '../../enum'
+function Index({ id, setSectionSelected }: SectionProps) {
   const [index, setIndex] = useState(0)
   const buttonActive = (i: number) => (index === i ? '--active' : '')
+  const ref = useRef<HTMLDivElement>(null)
+  useObserverSections(ref, () => {
+    setSectionSelected(Sections.projects)
+  })
+
   return (
-    <div id={cssId}>
+    <div id={id} ref={ref}>
       <div className='mainSection'>
         <h2 className='mainSection__title'> Proyectos</h2>
         <div className='project__buttons'>
@@ -15,7 +23,7 @@ function Index({ cssId }: { cssId: string }) {
 
             return (
               <a
-                href={`#${cssId}`}
+                href={`#${id}`}
                 className={`project__button project__button${buttonActive(i)}`}
                 key={article.title}
                 onClick={() => {

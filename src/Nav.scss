@@ -24,13 +24,11 @@
     padding: 0.1875rem 0.3125rem;
     align-items: center;
     color: var(--text-color);
+    font-size: 1.125rem;
     text-decoration: none;
     &:hover {
       background-color: var(--selection);
     }
-  }
-  &__text {
-    font-size: 1rem;
   }
   &__icon {
     aspect-ratio: 1/1;

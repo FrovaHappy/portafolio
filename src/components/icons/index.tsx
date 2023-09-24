@@ -31,7 +31,6 @@ interface IconProps {
 }
 const FilterIcon = (iconProps: IconProps) => {
   const { className, iconName, style } = iconProps
-  console.log(iconName)
   const { jsx, viewBox } = icons[iconName ?? 'shapes']
   return (
     <svg className={className} style={style} viewBox={viewBox} xmlns='http://www.w3.org/2000/svg' fill='currentColor'>
