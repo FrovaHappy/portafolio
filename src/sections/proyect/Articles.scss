@@ -5,12 +5,12 @@
     border-bottom: 2px solid var(--content-sup-opacity);
     display: flex;
     align-items: center;
-    margin-bottom: .3125rem;
+    margin-bottom: 0.3125rem;
   }
   & > div > h1 {
     font-size: 1.5625rem;
     white-space: nowrap;
-    padding-bottom: .625rem;
+    padding-bottom: 0.625rem;
   }
   & > h2 {
     font-size: 1.25rem;
@@ -24,19 +24,18 @@
   }
   & > p {
     font-size: 1rem;
-    padding-bottom: .3125rem;
+    padding-bottom: 0.3125rem;
     width: -webkit-fill-available;
   }
   & > p > img {
-    padding: .3125rem 0;
-    height: 31.25rem;
+    padding: 0.3125rem 0;
+    max-height: 31.25rem;
     max-width: -webkit-fill-available;
   }
   & > ul {
     list-style-position: inside;
     margin-left: 0.625rem;
   }
-
 }
 .socials {
   display: flex;
