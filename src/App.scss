@@ -38,6 +38,7 @@
   &__description {
     font-size: 1.125rem;
     max-width: 62.5rem;
+    padding-bottom: .3125rem;
   }
 }
 @mixin sectionBox($bg: transparent) {

@@ -9,10 +9,12 @@ const skills = [
   'TypesScript',
   'JavasScript',
   'Node',
+  'express',
   'React',
   'SASS',
   'CSS',
   'Git',
+  'GitHub',
   'Responsive Design',
   'Adaptive Design'
 ]
@@ -27,16 +29,26 @@ function About({ id, setSectionSelected }: SectionProps) {
         <section className='about__full'>
           <h2 className='mainSection__title'>Sobre Mí</h2>
           <h3 className='mainSection__description'>
-            Me gusta buscar soluciones a problemas concurrentes, he encontrado mi lugar en el mundo de la
-            programación... mi nombre es Francisco Vera y este soy yo.
+            <p>¡Hola! Me llamo Francisco Vera.</p>
+            <p>
+              Soy un programador apasionado por la tecnología y la resolución de problemas a través del código, y estoy
+              emocionado por la oportunidad de colaborar en proyectos innovadores y desafiantes.
+            </p>
           </h3>
         </section>
         <section>
           <h4 className='mainSection__subtitle'>Mi historia</h4>
           <p className='mainSection__description'>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus consectetur aut tenetur ipsum. Nemo
-            aliquid sequi alias eos illum consequatur, dolores neque. Impedit, maiores debitis magnam laudantium hic
-            saepe. Eos.
+            mi excursión por la informática empezó desde la secundaria, ya en mi ultimo año da la misma me llamo la
+            atenciones programación, aprendiendo lo básico con visual basic.
+          </p>
+          <p className='mainSection__description'>
+            Estudie un año y medio la carrera de licenciatura en sistema de información, tras dejarla después de la
+            pandemia, estuve trabajando en negro durante dos año, sin saber si retomaría la carrera.
+          </p>
+          <p className='mainSection__description'>
+            Desde entonces decidí retomar mis estudios de manera autodidactas, y aprender un stack de tecnologías y de
+            esta manera cumplir mis objetivos
           </p>
         </section>
         <section>
@@ -52,9 +64,6 @@ function About({ id, setSectionSelected }: SectionProps) {
         </section>
         <section className='about__full'>
           <h4 className='mainSection__subtitle'>Contácteme</h4>
-          <p className='mainSection__description'>
-            te recomiendo que me contactes por Linkedin pero puedes usar las siguientes redes.
-          </p>
           <div className='about__socials'>
             <a href={config.urlLinkedIn} className='about__social about__social--linkedin'>
               <Icons iconName='linkedin' className='about__social--icon' />
