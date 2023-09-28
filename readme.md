@@ -18,12 +18,12 @@ El mismo fue hecho con react, basado en plantilla de vite.
 ### El Home
 Este el que menos cambio Presento el resultado final.<br>
 
-![captura del Home](./resources/home.png)
+![captura del Home](https://raw.githubusercontent.com/FrovaHappy/portafolio/main/resources/home.png)
 
 ### Los proyectos
 El concepto era explayarme en la experiencia adquirida desde los diferentes proyectos y como enfrente los problemas que me iban surgiendo en los mismos, la idea original era integrar la información junto con el portafolio en forma de artículos personalizado, pero descarte la idea y tire de los readmes de los mismos.<br>
 
-![captura del proyecto](./resources/Proyecto.png)
+![captura del proyecto](https://raw.githubusercontent.com/FrovaHappy/portafolio/main/resources/Proyecto.png)
 
 ### El About Me
 este no tuvo un diseño preliminar solo me base en uno ya existente.
